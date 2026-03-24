@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <!-- Structură separată: HTML + CSS + JS -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio FLE+ | Platformă de e-learning și soft educațional pentru limba franceză</title>
+  <meta name="description" content="Platformă publică de e-learning și soft educațional pentru limba franceză: gimnaziu, liceu, DELF, competențe, olimpiade, cultură și exerciții interactive cu progres și feedback." />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#/home">
+        <div class="brand-mark">FR+</div>
+        <div class="brand-copy">
+          <div>Studio FLE+</div>
+          <small data-i18n="tagline">Platformă + soft educațional pentru elevi și profesori</small>
+        </div>
+      </a>
+      <nav class="nav-links" id="main-nav"></nav>
+      <div class="toolbar">
+        <label class="searchbox" aria-label="Caută">
+          <span>🔎</span>
+          <input id="global-search" type="text" placeholder="Caută lecții, DELF, olimpiade, cultură..." />
+        </label>
+        <button class="ghost" id="lang-toggle">FR</button>
+        <button class="secondary" id="login-toggle">Autentificare demo</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="app"></main>
+
+  <footer class="footer">
+    <div class="footer-card">
+      <h2>Pregătită pentru publicare gratuită și extindere reală</h2>
+      <p>Front-end-ul de mai jos este funcțional în browser și folosește date demo locale. Îl poți publica gratis ca site static, iar structura este pregătită și pentru migrare ulterioară către Next.js + API + bază de date.</p>
+      <div class="actions">
+        <a class="ghost" href="#/architecture" style="color:white;border-color:rgba(255,255,255,.24)">Vezi arhitectura</a>
+        <a class="primary" href="#/dashboard">Intră în dashboard</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="toast-stack" id="toast-stack"></div>
+
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal">
+    <div class="card-header">
+      <div>
+        <div class="badge blue">Exercițiu interactiv</div>
+        <h2 id="modal-title">Detalii</h2>
+      </div>
+      <button class="close" id="modal-close">✕</button>
+    </div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
